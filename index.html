@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>برنامه هفتگی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --secondary-color: #10b981;
+      --accent-color: #f59e0b;
+      --light-bg: #f9fafb;
+      --dark-text: #1f2937;
+      --light-text: #6b7280;
+      --border-color: #e5e7eb;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--border-color);
+      position: relative;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 100px;
+      height: 3px;
+      background: var(--secondary-color);
+    }
+    
+    .schedule-container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    
+    th, td {
+      padding: 16px 20px;
+      text-align: right;
+      border: 1px solid var(--border-color);
+    }
+    
+    th {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    
+    tr:hover {
+      background-color: #f1f5f9;
+    }
+    
+    td:first-child {
+      font-weight: 600;
+      color: var(--primary-color);
+      width: 120px;
+    }
+    
+    .rest-day {
+      background-color: rgba(16, 185, 129, 0.1) !important;
+      font-weight: 600;
+    }
+    
+    .rest-day td:first-child {
+      color: var(--secondary-color);
+    }
+    
+    .activity-item {
+      position: relative;
+      padding-right: 15px;
+      margin-bottom: 8px;
+    }
+    
+    .activity-item::before {
+      content: "•";
+      position: absolute;
+      right: 0;
+      color: var(--accent-color);
+      font-size: 1.2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .schedule-container {
+        overflow-x: auto;
+      }
+      
+      table {
+        min-width: 600px;
+      }
+      
+      th, td {
+        padding: 12px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>برنامه هفتگی یادگیری</h1>
+    <div class="schedule-container">
+      <table>
+        <thead>
+          <tr>
+            <th>روز</th>
+            <th>فعالیت‌ها</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>شنبه</td>
+            <td>
+              <div class="activity-item">1 ساعت: زبان انگلیسی</div>
+              <div class="activity-item">2 ساعت: لاراول و PHP</div>
+              <div class="activity-item">2 ساعت: Vue.js / JavaScript</div>
+              <div class="activity-item">1 ساعت: مرور مباحث جدید</div>
+              <div class="activity-item">2 ساعت: پروژه‌های مارکت راست‌چین</div>
+            </td>
+          </tr>
+          <tr>
+            <td>یکشنبه</td>
+            <td>
+              <div class="activity-item">1 ساعت: زبان انگلیسی</div>
+              <div class="activity-item">2 ساعت: لاراول و PHP</div>
+              <div class="activity-item">2 ساعت: وردپرس / المنتور</div>
+              <div class="activity-item">1 ساعت: مرور مباحث جدید</div>
+              <div class="activity-item">2 ساعت: پروژه‌های مارکت راست‌چین</div>
+            </td>
+          </tr>
+          <tr>
+            <td>دوشنبه</td>
+            <td>
+              <div class="activity-item">1 ساعت: زبان انگلیسی</div>
+              <div class="activity-item">2 ساعت: لاراول و PHP</div>
+              <div class="activity-item">2 ساعت: Vue.js / JavaScript</div>
+              <div class="activity-item">1 ساعت: یادگیری تکنولوژی‌های جدید</div>
+              <div class="activity-item">2 ساعت: پروژه‌های مارکت راست‌چین</div>
+            </td>
+          </tr>
+          <tr>
+            <td>سه‌شنبه</td>
+            <td>
+              <div class="activity-item">1 ساعت: زبان انگلیسی</div>
+              <div class="activity-item">2 ساعت: لاراول و PHP</div>
+              <div class="activity-item">2 ساعت: وردپرس / المنتور</div>
+              <div class="activity-item">1 ساعت: مرور مباحث جدید</div>
+              <div class="activity-item">2 ساعت: پروژه‌های مارکت راست‌چین</div>
+            </td>
+          </tr>
+          <tr>
+            <td>چهارشنبه</td>
+            <td>
+              <div class="activity-item">1 ساعت: زبان انگلیسی</div>
+              <div class="activity-item">2 ساعت: لاراول و PHP</div>
+              <div class="activity-item">2 ساعت: وردپرس / المنتور</div>
+              <div class="activity-item">1 ساعت: تکنولوژی‌های جدید</div>
+              <div class="activity-item">2 ساعت: پروژه‌های مارکت راست‌چین</div>
+            </td>
+          </tr>
+          <tr>
+            <td>پنجشنبه</td>
+            <td>
+              <div class="activity-item">1 ساعت: زبان انگلیسی</div>
+              <div class="activity-item">2 ساعت: لاراول و PHP</div>
+              <div class="activity-item">2 ساعت: Vue.js / JavaScript</div>
+              <div class="activity-item">1 ساعت: مطالعه امنیت و UI/UX</div>
+              <div class="activity-item">2 ساعت: پروژه‌های مارکت راست‌چین</div>
+            </td>
+          </tr>
+          <tr class="rest-day">
+            <td>جمعه</td>
+            <td>روز استراحت و تجدید انرژی</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
